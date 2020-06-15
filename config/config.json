@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "arduino-mini-pump",
+  "private_key_id": "464de7d4019852de7225c3e083722ede9150258c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDCTe0H5wnbR7wA\nIyi99hLhOIde8krwlZy9YEzKY50Tk8bdZDLcsoVb8gZKN00rOVQp1O9EzzdZBvld\n2IWnG0JnS+unP/CdJN7oAZgwVimsUvPACokS21qg5AS1Jr5Lm9v6bZnxYu55wrNc\njNYewT0i/iz7nUPm5XBE2vcXkoj4uNoSqZ9LuuPrTpnojffVGCika2TQXZeVnkP7\nyLrltiMDrNaEi1CAaLfLQYM7x7fPRCwhDzG7SPK83HWiucnjU5k35hZAddFFG+UZ\nkT1QdCQY0+CPV6v0scSlPDEHd7b8beGvVi9q0kCfN3gM8kWOaJkrnVxpEAmxTnbK\n/C6LImLtAgMBAAECggEANDn85bxgplukOUc6CsFLNtVacZdftEYKoM5zJY1b6ai1\nccmecDrd5KZrsWQm7mDU8f+FprGp91iMC4EI/68wjJJYD5b8pkiET8kp7ogiYGrV\nkL9kM7jZJdjUORrmWG1W1fvCvqKwZfMDAfPrE84uECtQzPrrBvOR1zgh5WiiP3P8\nB8Ka0AMynGIxbtfXssCsfoPNVsE9Ft+V5t7DT7QNuvm+cmfFcmz6QfBzLT/JCyTo\n9mVg4CkAA1kv/Wj++oaXK2Cgad1XC2OvzNrHuYuAVIW5quxSczGqdlBXaR3e9meP\nhuWPctvhlHGaNw2A3GOFdRvlLmWA40jpzbe6/oWxwwKBgQDxbW0RHjeMWXa3MipA\nIesFC494whxU1MaYeCIKt4/pKet1JxAfSvfoYSeJxcr6gqtFeXID2+wfCPL+SWyn\nypsfZilfIVmfv+OuqVFUCI9B0hMQz8DQrEn0H6LiBugPB4tG8xHPrwZ1owQ6Guby\nQGoWzz2se/21tWEJjM4MLWfEJwKBgQDOCFjoVFRioLwfpblMvtVX/A3/GZMh+wOe\nuAn5AP+R8Ju96+XoXGdgOBO5RkbwXjRKNM0RTtoH0a+80h5l1Ty6On3UCqi0KIqe\nCK53n5wino8FFp5FI3KCIDFeJzEvdls0Zaa0Q5HjcFtmkbuwDbuEEuQ8P8gRv1CL\noPcndMZoywKBgDzabx5cdnXq6vB8NYgaxIluA4jVrJx5UWGHDlWTNTP5O/84jGjG\n1bv+GSAx+dqw6wjE9scgPOEJuW39BeU5PWZpss3msxeAH5yb0wMScUGO+P1I0HoI\no09kVgMQ6Jc5OJL2m6u0mzU1lNAsjb/MGrGLJSl/y1Bs2nu0wQ7ytvALAoGAN8ec\nwnGqUvVvWSYV78gunF56L5lt8yIxTbRHxulVR96bW6TVHr59olgsRtnW9NacU4bO\nCiSN9NX5PSap4ioEAes6C8FDAVuEg9qX2X0V2W2SDO+ds9wv8TjkBLiZoV7qvFnU\n8zLj+W5+4FsONFDTdqNitUkTUnK4TMUshLshyFcCgYB123PA6yl9JkQk7MaTUy4Q\nJD7preVt0qWVVQJw+19eDr0naSoUfiVBUVW06bcpOgEgLZbJYUg8OHToO9+68ncG\np9I5APBTphUEFPUY8ILRuSD/Bl/ZHDDDndn2hC1/DgUfmg1HV7VWS91X/k2m2ABc\nyVqMu0hB6zENCzqfBRyuAg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-rgzi9@arduino-mini-pump.iam.gserviceaccount.com",
+  "client_id": "113931237371287120017",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-rgzi9%40arduino-mini-pump.iam.gserviceaccount.com"
+}
