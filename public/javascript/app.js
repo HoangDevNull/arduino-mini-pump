@@ -1,11 +1,20 @@
 // Style for html
-var style = document.querySelector(".water-box").style;
-setTimeout(() => {
-  style.setProperty("--top", "200px");
+var waterBox = document.querySelector(".water-box").style;
+var waterPercent = document.querySelector(".water-box .water-percent");
+var checkbox = document.querySelector(".rocker input");
+
+const updateWaterData = (waterPercent) => {
+  console.log(waterPercent);
+  let maxHeight = 500;
+
+  let waterHeight = Math.abs((waterPercent / 100) * maxHeight - 500);
+
+  waterBox.setProperty("--top", waterHeight + "px");
+  // for IE
   cssVars({
-    variables: { "--top": "200px" },
+    variables: { "--top": waterHeight + "px" },
   });
-}, 2000);
+};
 
 const URL = "http://localhost:3000/";
 var socket = io(URL);
@@ -14,4 +23,16 @@ socket.on("connect", () => {
 });
 socket.on("disconnect", () => {
   console.log("disconnect to" + URL);
+});
+
+socket.on("data", (data) => {
+  let percent = data.value;
+  updateWaterData(percent);
+  waterPercent.innerText = `${percent} %`;
+  checkbox.checked = data.isActive === 0 ? false : true;
+});
+
+checkbox.addEventListener("click", (e) => {
+  let state = checkbox.checked;
+  socket.emit("isActive", state ? 1 : 0);
 });

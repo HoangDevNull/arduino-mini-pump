@@ -9,22 +9,31 @@ var io = require("socket.io")(http);
 var db = admin.database();
 var ref = db.ref("/water_pump");
 
-ref.set(
-  {
-    value: 0,
-    isActive: 0,
-  },
-);
+// ref.set({
+//   value: 0,
+//   isActive: 0,
+// });
 
-/**
- * Reading Value from
- * Firebase Data Object
- */
-ref.once("value", function (snapshot) {
-  var data = snapshot.val(); //Data is in JSON format.
-  console.log(data);
+io.on("connection", (socket) => {
+  socket.on("isActive", (data) => {
+    ref.update({
+      isActive: data,
+    });
+  });
+
+  // Attach an asynchronous callback to read the data at our posts reference
+  ref.on(
+    "value",
+    function (snapshot) {
+      socket.emit("data", snapshot.val());
+    },
+    function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    }
+  );
 });
 
+// setup SSR
 app.use(express.static("public"));
 
 app.get("/", (req, res, next) => {
