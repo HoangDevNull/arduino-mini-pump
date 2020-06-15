@@ -5,9 +5,9 @@ var checkbox = document.querySelector(".rocker input");
 
 const updateWaterData = (waterPercent) => {
   console.log(waterPercent);
-  let maxHeight = 500;
+  let maxHeight = 400;
 
-  let waterHeight = Math.abs((waterPercent / 100) * maxHeight - 500);
+  let waterHeight = Math.abs((waterPercent / 100) * maxHeight - maxHeight);
 
   waterBox.setProperty("--top", waterHeight + "px");
   // for IE
@@ -16,7 +16,7 @@ const updateWaterData = (waterPercent) => {
   });
 };
 
-const URL = "http://localhost:3000/";
+const URL = "/";
 var socket = io(URL);
 socket.on("connect", () => {
   console.log("connect to" + URL);
@@ -32,7 +32,24 @@ socket.on("data", (data) => {
   checkbox.checked = data.isActive === 0 ? false : true;
 });
 
-checkbox.addEventListener("click", (e) => {
-  let state = checkbox.checked;
-  socket.emit("isActive", state ? 1 : 0);
+
+
+checkbox.addEventListener("click", async (e) => {
+  var key = prompt("Please enter the key:", "");
+  try {
+
+    const res = await fetch("/access?key=" + key);
+    const { isAuthorize } = await res.json();
+
+    if (isAuthorize) {
+      let state = checkbox.checked;
+      socket.emit("isActive", state ? 1 : 0);
+    } else {
+      alert("wrong key, please try again !!!");
+      checkbox.checked = !checkbox.checked;
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
 });
